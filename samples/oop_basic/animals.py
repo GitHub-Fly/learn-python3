@@ -21,6 +21,7 @@ a = Animal()
 d = Dog()
 c = Cat()
 
+# isinstance()方法判断某个对象是否属于某个类型
 print('a is Animal?', isinstance(a, Animal))
 print('a is Dog?', isinstance(a, Dog))
 print('a is Cat?', isinstance(a, Cat))
