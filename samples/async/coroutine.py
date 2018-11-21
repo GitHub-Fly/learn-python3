@@ -4,6 +4,7 @@
 def consumer():
     r = ''
     while True:
+        # yield关键字的作用?
         n = yield r
         if not n:
             return
@@ -11,6 +12,7 @@ def consumer():
         r = '200 OK'
 
 def produce(c):
+    # 调用c.send(None)启动生产者
     c.send(None)
     n = 0
     while n < 5:
