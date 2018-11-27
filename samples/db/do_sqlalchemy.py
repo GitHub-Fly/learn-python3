@@ -18,7 +18,7 @@ class User(Base):
     name = Column(String(20))
 
 # 初始化数据库连接:
-engine = create_engine('mysql+mysqlconnector://root:password@localhost:3306/test')
+engine = create_engine('mysql+mysqlconnector://root:123456@localhost:3306/test')
 # 创建DBSession类型:
 DBSession = sessionmaker(bind=engine)
 
@@ -32,6 +32,8 @@ session.add(new_user)
 session.commit()
 # 关闭session:
 session.close()
+
+print('User(id="5", name="Bob")对象已保存到数据库...')
 
 # 创建Session:
 session = DBSession()
