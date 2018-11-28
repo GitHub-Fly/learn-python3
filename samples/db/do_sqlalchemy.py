@@ -25,7 +25,7 @@ DBSession = sessionmaker(bind=engine)
 # 创建session对象:
 session = DBSession()
 # 创建新User对象:
-new_user = User(id='5', name='Bob')
+new_user = User(id='6', name='Bob')
 # 添加到session:
 session.add(new_user)
 # 提交即保存到数据库:
@@ -33,7 +33,7 @@ session.commit()
 # 关闭session:
 session.close()
 
-print('User(id="5", name="Bob")对象已保存到数据库...')
+print('User(id="6", name="Bob")对象已保存到数据库...')
 
 # 创建Session:
 session = DBSession()
