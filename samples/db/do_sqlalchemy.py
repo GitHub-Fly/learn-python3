@@ -21,19 +21,19 @@ class User(Base):
 engine = create_engine('mysql+mysqlconnector://root:123456@localhost:3306/test')
 # 创建DBSession类型:
 DBSession = sessionmaker(bind=engine)
+print('已完成Session的初始化')
 
 # 创建session对象:
 session = DBSession()
 # 创建新User对象:
-new_user = User(id='6', name='Bob')
+new_user = User(id='７', name='Bob')
 # 添加到session:
 session.add(new_user)
 # 提交即保存到数据库:
 session.commit()
 # 关闭session:
 session.close()
-
-print('User(id="6", name="Bob")对象已保存到数据库...')
+print('User(id="７", name="Bob")对象已保存到数据库...')
 
 # 创建Session:
 session = DBSession()
